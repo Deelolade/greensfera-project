@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
+// import Header from './components/Header';
+// import Hero from './components/Hero';
+// import About from './components/About';
 // import Projects from './components/Projects';
-import Impact from './components/Impact';
+// import Impact from './components/Impact';
 // import YouthHub from './components/YouthHub';
-import Gallery from './components/Gallery';
-import GetInvolved from './components/GetInvolved';
-import Footer from './components/Footer';
+// import Gallery from './components/Gallery';
+// import GetInvolved from './components/GetInvolved';
+// import Footer from './components/Footer';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import WhoWeAre from './pages/WhoWeAre';
@@ -16,7 +16,7 @@ import YouthHub from './pages/YouthHub';
 import Contact from './pages/Contact';
 
 function App() {
-  const [currentSection, setCurrentSection] = useState('home');
+  // const [currentSection, setCurrentSection] = useState('home');
 
   return (
     <>
