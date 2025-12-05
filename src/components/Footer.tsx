@@ -1,12 +1,9 @@
 import { Leaf, Instagram, Facebook, Twitter, Linkedin } from 'lucide-react';
 
-interface FooterProps {
-  setCurrentSection: (section: string) => void;
-}
 
-export default function Footer({ setCurrentSection }: FooterProps) {
+
+export default function Footer() {
   const handleNavClick = (section: string) => {
-    setCurrentSection(section);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
