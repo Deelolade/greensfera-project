@@ -1,11 +1,9 @@
-import About from "../components/About"
 import AboutUsSection from "../components/AboutUsSection"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import MeetTheTeam from "../components/MeetTheTeam"
 import ProjectSection from "../components/Projects"
 import TestimonialsSection from "../components/Testimonials"
-import WhoWeAreSection from "../components/WhoWeARe"
 
 const WhoWeAre = () => {
   return (
