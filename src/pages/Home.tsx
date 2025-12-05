@@ -1,5 +1,7 @@
 import About from "../components/About"
+import Footer from "../components/Footer"
 import Gallery from "../components/Gallery"
+import GetInvolved from "../components/GetInvolved"
 import Header from "../components/Header"
 import Hero from "../components/Hero"
 import Impact from "../components/Impact"
@@ -14,6 +16,8 @@ const Home = () => {
       <Projects/>
       <Impact/>
       <Gallery/>
+      <GetInvolved/>
+      <Footer/>
     </>
   )
 }

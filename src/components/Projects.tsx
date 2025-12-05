@@ -1,5 +1,5 @@
 // import { Trees, Trash2, Cpu, GraduationCap } from 'lucide-react';
-import { Eye, MoveLeft, MoveRight } from 'lucide-react';
+import { MoveRight } from 'lucide-react';
 import projectImageOne from '../public/images/project-image-one.jpg'
 import projectImageTwo from '../public/images/globe.jpg'
 import projectImageThree from '../public/images/plant-in-hand.jpg'
