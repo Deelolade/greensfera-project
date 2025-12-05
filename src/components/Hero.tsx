@@ -30,7 +30,7 @@ export default function Hero() {
               <span className="text-sm font-medium text-[#0A3B2E]">{randomTagline}</span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#fff] leading-tight">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-[#fff] leading-tight">
               Greener solutions.{' '}
               <span className="text-[#009B4C]">Smarter technology.</span>{' '}
               A sustainable future for all.
