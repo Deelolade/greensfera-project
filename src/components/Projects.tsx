@@ -1,11 +1,13 @@
 // import { Trees, Trash2, Cpu, GraduationCap } from 'lucide-react';
 import { Eye, MoveLeft, MoveRight } from 'lucide-react';
 import projectImageOne from '../public/images/project-image-one.jpg'
+import projectImageTwo from '../public/images/globe.jpg'
+import projectImageThree from '../public/images/plant-in-hand.jpg'
 
 
 const projects = [
   {
-    image: projectImageOne,
+    image: projectImageTwo,
     title: 'CLEAN EARTH CAMPAIGNS',
     description: 'A cleaner community starts with smarter choices',
 
@@ -17,7 +19,7 @@ const projects = [
 
   },
   {
-    image: projectImageOne,
+    image: projectImageThree,
     title: 'DIGITAL CLIMATE ACTION',
     description: 'Mobilizing communities through smart, tech-powered campaigns.',
 
@@ -53,9 +55,9 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20">
           {projects.map((project, idx) => {
             return (
-              <div key={idx} className='overflow-hidden rounded-xl'>
-                <div className='overflow-hidden rounded-xl shadow-lg'>
-                  <img src={project.image} alt="" className=' rounded-2xl object-cover transition-transform duration-500 ease-in-out hover:scale-105' />
+              <div key={idx} className='overflow-hidden '>
+                <div className='overflow-hidden rounded-2xl shadow-lg'>
+                  <img src={project.image} alt="" className='max-w-[620px] h-[384px] w-full rounded-2xl object-cover transition-transform duration-700 ease-in-out hover:scale-105' />
                 </div>
                 <div className="mt-6 ">
                   <p className=' text-[#009B4C] font-semibold '>{project.title}</p>
