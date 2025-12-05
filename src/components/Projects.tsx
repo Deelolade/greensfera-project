@@ -1,5 +1,6 @@
 // import { Trees, Trash2, Cpu, GraduationCap } from 'lucide-react';
- import projectImageOne from '../public/images/project-image-one.jpg'
+import { Eye, MoveLeft, MoveRight } from 'lucide-react';
+import projectImageOne from '../public/images/project-image-one.jpg'
 
 
 const projects = [
@@ -7,25 +8,25 @@ const projects = [
     image: projectImageOne,
     title: 'CLEAN EARTH CAMPAIGNS',
     description: 'A cleaner community starts with smarter choices',
-    
+
   },
   {
     image: projectImageOne,
     title: 'YOUTH INNOVATORS HUB',
     description: 'Where young minds build tomorrow’s climate solutions',
-    
+
   },
   {
     image: projectImageOne,
     title: 'DIGITAL CLIMATE ACTION',
     description: 'Mobilizing communities through smart, tech-powered campaigns.',
-    
+
   },
   // {
   //   image: projectImageOne,
   //   title: 'Community Sustainability Trainings',
   //   description: 'Workshops on green living, renewable energy, and circular economy practices.',
-   
+
   // },
 ];
 
@@ -51,17 +52,23 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20">
           {projects.map((project, idx) => {
-            return(
+            return (
               <div key={idx} className='overflow-hidden rounded-xl'>
                 <div className='overflow-hidden rounded-xl shadow-lg'>
-                <img src={project.image} alt="" className=' rounded-2xl object-cover transition-transform duration-500 ease-in-out hover:scale-105' />
+                  <img src={project.image} alt="" className=' rounded-2xl object-cover transition-transform duration-500 ease-in-out hover:scale-105' />
                 </div>
                 <div className="mt-6 ">
                   <p className=' text-[#009B4C] font-semibold '>{project.title}</p>
-                  <h2 className='text-4xl my-2 font-heading'>{project.description}</h2>
+                  <h2 className='text-2xl font-semibold md:text-4xl my-2 font-heading'>{project.description}</h2>
+                  <div className="mt-4 group flex items-center space-x-2 cursor-pointer">
+                    <span className="text-lg font-semibold">Learn more</span>
+                    <MoveRight
+                      className="w-6 h-6 transition-transform duration-300 ease-in-out group-hover:translate-x-2"
+                    />
+                  </div>
                 </div>
 
-                
+
               </div>
             )
           })}
