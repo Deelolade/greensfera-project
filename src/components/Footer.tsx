@@ -1,4 +1,4 @@
-import { Leaf, Instagram, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Leaf, Instagram, Facebook, Twitter, Linkedin, X, TwitterIcon, LucideTwitter } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -79,7 +79,7 @@ export default function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => handleNavClick('contact')}
+                  onClick={() => handleNavClick('contact-us')}
                   className="text-white/70 hover:text-white transition-colors text-sm"
                 >
                   Partner With Us
@@ -87,7 +87,7 @@ export default function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => handleNavClick('contact')}
+                  onClick={() => handleNavClick('contact-us')}
                   className="text-white/70 hover:text-white transition-colors text-sm"
                 >
                   Donate
@@ -95,7 +95,7 @@ export default function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => handleNavClick('contact')}
+                  onClick={() => handleNavClick('contact-us')}
                   className="text-white/70 hover:text-white transition-colors text-sm"
                 >
                   Contact
@@ -126,7 +126,7 @@ export default function Footer() {
                 className="bg-white/10 p-3 rounded-full hover:bg-[#009B4C] transition-all"
                 aria-label="Twitter"
               >
-                <Twitter className="w-5 h-5" />
+                <LucideTwitter className="w-5 h-5" />
               </a>
               <a
                 href="#"
