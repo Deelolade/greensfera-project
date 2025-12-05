@@ -160,7 +160,7 @@ const CTASectionDemo = () => {
         </div>
 
         {/* Trust Indicators */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <p className="text-white/60 text-sm mb-6">
             Trusted by leading organizations worldwide
           </p>
@@ -171,7 +171,7 @@ const CTASectionDemo = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
