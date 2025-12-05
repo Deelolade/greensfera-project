@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { ArrowRight, Sparkles, Users, Target, CheckCircle, Star } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const CTASectionDemo = () => {
   const [selectedPlan, setSelectedPlan] = useState('volunteer');
-
+  const navigate = useNavigate()
   const benefits = [
     "Make a real, measurable impact",
     "Connect with a global community",
@@ -43,9 +44,8 @@ const CTASectionDemo = () => {
   ];
 
   const handleJoinNow = () => {
+    navigate('/contact-us ')
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    console.log('Joining as:', selectedPlan);
-    alert(`Great choice! Redirecting to ${selectedPlan} registration...`);
   };
 
   return (
