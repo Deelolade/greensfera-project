@@ -1,9 +1,12 @@
+import Footer from "../components/Footer"
+import Header from "../components/Header"
 
 const WhoWeAre = () => {
   return (
-    <div>
-      Who We Are page
-    </div>
+    <>
+    <Header/>
+    <Footer/>
+    </>
   )
 }
 

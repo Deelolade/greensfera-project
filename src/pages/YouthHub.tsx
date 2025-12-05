@@ -1,9 +1,12 @@
+import Footer from "../components/Footer"
+import Header from "../components/Header"
 
 const YouthHub = () => {
   return (
-    <div>
-      Youth Hub page
-    </div>
+    <>
+        <Header/>
+        <Footer/>
+        </>
   )
 }
 

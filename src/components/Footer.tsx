@@ -1,9 +1,12 @@
 import { Leaf, Instagram, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 
 
 export default function Footer() {
+  const navigate = useNavigate()
   const handleNavClick = (section: string) => {
+    navigate(`/${section}`)
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -30,7 +33,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <button
-                  onClick={() => handleNavClick('home')}
+                  onClick={() => handleNavClick('')}
                   className="text-white/70 hover:text-white transition-colors text-sm"
                 >
                   Home
@@ -38,7 +41,7 @@ export default function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => handleNavClick('about')}
+                  onClick={() => handleNavClick('who-we-are')}
                   className="text-white/70 hover:text-white transition-colors text-sm"
                 >
                   Who We Are
@@ -68,7 +71,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <button
-                  onClick={() => handleNavClick('contact')}
+                  onClick={() => handleNavClick('contact-us')}
                   className="text-white/70 hover:text-white transition-colors text-sm"
                 >
                   Volunteer
