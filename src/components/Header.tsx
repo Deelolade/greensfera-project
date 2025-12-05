@@ -22,21 +22,20 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0  backdrop-blur-sm z-50 ">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white md:bg-transparent">
-        <div className="flex justify-between items-center h-20 ">
+        <div className="flex justify-between items-center h-[10vh] lg:h-20 ">
           <div
             className="flex items-center space-x-3 cursor-pointer group"
             onClick={() => handleNavClick('home')}
           >
             <div className="relative">
               <div className="absolute inset-0 bg-[#0A3B2E] rounded-full blur-sm opacity-30 group-hover:opacity-50 transition-opacity"></div>
-              <Leaf className="w-10 h-10 text-[#009B4C] relative" strokeWidth={1.5} />
+              <Leaf className="size-5 lg:size-10 text-[#009B4C] relative" strokeWidth={1.5} />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-[#0A3B2E]">GreenSfera</h1>
-              <p className="text-xs text-[#fff] font-medium">Climate-Tech Solutions</p>
+              <h1 className="text-sm lg:text-2xl font-bold text-[#0A3B2E]">GreenSfera</h1>
+              <p className="text-xs text-[#0A3B2E] lg:text-[#fff] font-medium">Climate-Tech Solutions</p>
             </div>
           </div>
-
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
@@ -66,7 +65,7 @@ export default function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-100 bg-white">
+          <div className="md:hidden py-4 border-t border-gray-100 bg-white ">
             {navItems.map((item) => (
               <button
                 key={item.id}

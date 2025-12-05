@@ -16,15 +16,9 @@ export default function Hero() {
   return (
     <section style={{ backgroundImage: `url(${image})` }} className="bg-cover bg-center h-screen relative pt-20 min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 bg-black/30"></div>
-      {/* <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#009B4C] rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#0A3B2E] rounded-full blur-3xl"></div>
-      </div> */}
-
- 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+      <div className="max-w-7xl mx-auto px-2 lg:px-10  py-20 relative z-10">
         <div className="  items-center relative">
-          <div className="space-y-8 text-center">
+          <div className=" space-y-4 lg:space-y-8 text-center">
             <div className="inline-flex text-center items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-[#009B4C]/20">
               <Sparkles className="w-4 h-4 text-[#009B4C]" />
               <span className="text-sm font-medium text-[#0A3B2E]">{randomTagline}</span>
@@ -47,7 +41,7 @@ export default function Hero() {
                   // setCurrentSection('contact');
                   // window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="group bg-[#009B4C] text-white px-8 py-4 rounded-md text-base font-medium hover:bg-[#007A3D] transition-all hover:shadow-xl hover:shadow-[#009B4C]/30 flex items-center space-x-2"
+                className="group bg-[#009B4C] text-white px-8 py-3 lg:py-4 rounded-md text-base font-medium hover:bg-[#007A3D] transition-all hover:shadow-xl hover:shadow-[#009B4C]/30 flex items-center space-x-2"
               >
                 <span>Join Our Movement</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -57,7 +51,7 @@ export default function Hero() {
                   // setCurrentSection('projects');
                   // window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="bg-white text-[#0A3B2E] px-8 py-4 rounded-md text-base font-medium border-2 border-[#0A3B2E] hover:bg-[#0A3B2E] hover:text-white transition-all"
+                className="bg-white text-[#0A3B2E] px-8 py-3 lg:py-4 rounded-md text-base font-medium border-2 border-[#0A3B2E] hover:bg-[#0A3B2E] hover:text-white transition-all"
               >
                 Explore Projects
               </button>
