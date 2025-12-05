@@ -1,5 +1,5 @@
 import { Menu, X, Leaf } from 'lucide-react';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -7,8 +7,8 @@ import { useNavigate } from 'react-router-dom';
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate()
-  const topNavbar = useRef<HTMLDivElement>(null)
-  const navbarText = useRef<HTMLParagraphElement>(null)
+  // const topNavbar = useRef<HTMLDivElement>(null)
+  // const navbarText = useRef<HTMLParagraphElement>(null)
   const navbarTextRefs = useRef<HTMLButtonElement[]>([]);
 
 //   useEffect(() => {
@@ -96,7 +96,7 @@ export default function Header() {
               </button>
             ))}
             <button
-              onClick={() => handleNavClick('contact')}
+              onClick={() => handleNavClick('contact-us')}
               className="bg-[#009B4C] text-white px-8 py-2.5 rounded-md text-[16px] font-medium hover:bg-[#007A3D] transition-all hover:shadow-lg hover:shadow-[#009B4C]/30"
             >
               Join Us

@@ -124,7 +124,7 @@ export default function Header() {
               </button>
             ))}
             <button
-              onClick={() => handleNavClick('contact')}
+              onClick={() => handleNavClick('contact-us')}
               className="w-full mt-4 bg-[#009B4C] text-white px-6 py-3 rounded-full text-sm font-medium"
             >
               Join Us

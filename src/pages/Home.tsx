@@ -6,6 +6,7 @@ import Header from "../components/HeroHeader"
 import Hero from "../components/Hero"
 import Impact from "../components/Impact"
 import Projects from "../components/Projects"
+import TestimonialsSection from "../components/Testimonials"
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Projects/>
       <Impact/>
       <Gallery/>
+      <TestimonialsSection/>
       <GetInvolved/>
       <Footer/>
     </>
