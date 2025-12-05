@@ -1,5 +1,6 @@
 import { ArrowRight, Sparkles, Leaf, Cpu } from 'lucide-react';
 import image from '../public/images/two-people-sitting-on-grass.jpg'
+import { useNavigate } from 'react-router-dom';
 
 
 const taglines = [
@@ -11,6 +12,7 @@ const taglines = [
 ];
 
 export default function Hero() {
+  const navigate = useNavigate()
   const randomTagline = taglines[Math.floor(Math.random() * taglines.length)];
 
   return (
@@ -38,8 +40,8 @@ export default function Hero() {
             <div className="flex flex-wrap gap-4 mx-auto justify-center">
               <button
                 onClick={() => {
-                  // setCurrentSection('contact');
-                  // window.scrollTo({ top: 0, behavior: 'smooth' });
+                  navigate('/contact-us')
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
                 className="group bg-[#009B4C] text-white px-8 py-3 lg:py-4 rounded-md text-base font-medium hover:bg-[#007A3D] transition-all hover:shadow-xl hover:shadow-[#009B4C]/30 flex items-center space-x-2"
               >
@@ -48,8 +50,8 @@ export default function Hero() {
               </button>
               <button
                 onClick={() => {
-                  // setCurrentSection('projects');
-                  // window.scrollTo({ top: 0, behavior: 'smooth' });
+                  navigate('/projects');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
                 className="bg-white text-[#0A3B2E] px-8 py-3 lg:py-4 rounded-md text-base font-medium border-2 border-[#0A3B2E] hover:bg-[#0A3B2E] hover:text-white transition-all"
               >

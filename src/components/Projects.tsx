@@ -41,7 +41,7 @@ const projects = [
 //   'Tech-enabled environmental tracking',
 // ];
 
-export default function Projects() {
+export default function ProjectSection() {
   return (
     <section className={`py-20 bg-gradient-to-br from-[#F2F0EA] via-white to-[#C2F0D5]/20`}>
       <div className="max-w-max mx-auto px-4 sm:px-6 lg:px-20">

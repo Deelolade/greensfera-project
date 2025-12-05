@@ -16,29 +16,9 @@ import YouthHub from './pages/YouthHub';
 import Contact from './pages/Contact';
 
 function App() {
-  // const [currentSection, setCurrentSection] = useState('home');
 
   return (
     <>
-    {/* <div className="min-h-screen bg-white">
-      <Header currentSection={currentSection} setCurrentSection={setCurrentSection} />
-      {currentSection === 'home' && (
-        <>
-          <Hero setCurrentSection={setCurrentSection} />
-          <About setCurrentSection={setCurrentSection} />
-          <Projects />
-          <Impact />
-          <YouthHub setCurrentSection={setCurrentSection} />
-          <Gallery />
-          <GetInvolved setCurrentSection={setCurrentSection} />
-        </>
-      )}
-      {currentSection === 'about' && <About setCurrentSection={setCurrentSection} full />}
-      {currentSection === 'projects' && <Projects full />}
-      {currentSection === 'youth-hub' && <YouthHub setCurrentSection={setCurrentSection} full />}
-      {currentSection === 'contact' && <GetInvolved setCurrentSection={setCurrentSection} full />}
-      <Footer setCurrentSection={setCurrentSection} />
-    </div> */}
     <Routes>
       <Route index element={<Home/>}/>
       <Route path='who-we-are' element={<WhoWeAre/>}/>
