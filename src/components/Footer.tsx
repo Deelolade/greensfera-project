@@ -1,4 +1,4 @@
-import { Leaf, Instagram, Facebook, Twitter, Linkedin, X, TwitterIcon, LucideTwitter } from 'lucide-react';
+import { Leaf, Instagram, Facebook, Linkedin, LucideTwitter } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 
