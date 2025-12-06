@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Star, Quote, ChevronLeft, ChevronRight, Play } from 'lucide-react';
+import { Star, Quote, ChevronLeft, ChevronRight, } from 'lucide-react';
 
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -72,12 +72,6 @@ const TestimonialsSection = () => {
       impact: "Coordinated 1000+ volunteers",
       video: false
     }
-  ];
-
-  const stats = [
-    { value: "4.9/5", label: "Average Rating" },
-    { value: "2,500+", label: "Reviews" },
-    { value: "98%", label: "Satisfaction Rate" }
   ];
 
   useEffect(() => {
@@ -236,8 +230,8 @@ const TestimonialsSection = () => {
                   className="w-12 h-12 rounded-full object-cover border-2 border-[#009B4C]/20"
                 />
                 <div>
-                  <h4 className="font-bold text-gray-900 dark:text-white">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">{testimonial.role}</p>
+                  <h4 className="font-bold text-white">{testimonial.name}</h4>
+                  <p className="text-sm text-gray-400">{testimonial.role}</p>
                 </div>
               </div>
               
