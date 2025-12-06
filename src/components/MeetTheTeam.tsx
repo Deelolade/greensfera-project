@@ -35,36 +35,6 @@ const MeetTheTeam = () => {
       twitter: "#",
       email: "maria@example.com"
     },
-    {
-      id: 4,
-      name: "David Kim",
-      role: "Director of Innovation",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-      bio: "Serial entrepreneur and sustainability advocate with expertise in scaling green business models globally.",
-      linkedin: "#",
-      twitter: "#",
-      email: "david@example.com"
-    },
-    {
-      id: 5,
-      name: "Aisha Patel",
-      role: "Head of Partnerships",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-      bio: "Strategic partnership expert focused on building collaborations that amplify environmental impact worldwide.",
-      linkedin: "#",
-      twitter: "#",
-      email: "aisha@example.com"
-    },
-    {
-      id: 6,
-      name: "Michael Chen",
-      role: "Lead Designer",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-      bio: "Creative director combining design thinking with sustainability to create engaging user experiences.",
-      linkedin: "#",
-      twitter: "#",
-      email: "michael@example.com"
-    }
   ];
 
 
@@ -104,7 +74,7 @@ const MeetTheTeam = () => {
           {teamMembers.map((member) => (
             <div
               key={member.id}
-              onMouseEnter={() => setHoveredMember(member.id!)}
+              onMouseEnter={() => setHoveredMember(member.id)}
               onMouseLeave={() => setHoveredMember(null)}
               className="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 transition-all duration-300 hover:bg-white/20 hover:scale-105 hover:shadow-2xl group"
             >
