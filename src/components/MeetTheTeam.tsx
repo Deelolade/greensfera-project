@@ -1,9 +1,6 @@
-import { useState } from 'react';
-import { Linkedin, Twitter, Mail, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 const MeetTheTeam = () => {
-  const [hoveredMember, setHoveredMember] = useState(null);
-
   const teamMembers = [
     {
       id: 1,
@@ -37,8 +34,16 @@ const MeetTheTeam = () => {
     },
   ];
 
+   const getInitials = (name: string) => {
+    return name
+      .split(" ")
+      .map((n) => n[0])
+      .join("")
+      .toUpperCase();
+  };
 
   return (
+    
     <div className='py-16 lg:py-24 bg-gradient-to-br from-[#009B4C] to-[#0A3B2E] relative overflow-hidden'>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -55,7 +60,7 @@ const MeetTheTeam = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 lg:mb-16">
           <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white text-sm font-medium mb-4">
             <span>🌟</span>
             <span>The People Behind the Mission</span>
@@ -64,81 +69,33 @@ const MeetTheTeam = () => {
             Meet Our Team
           </h2>
           <p className="text-lg text-white/90 max-w-2xl mx-auto">
-            A diverse group of passionate innovators, technologists, and changemakers 
+            A diverse group of passionate innovators, technologists, and changemakers
             united by a shared vision for a sustainable future.
           </p>
         </div>
-
-        {/* Leadership Team Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {teamMembers.map((member) => (
-            <div
-              key={member.id}
-              onMouseEnter={() => setHoveredMember(member.id)}
-              onMouseLeave={() => setHoveredMember(null)}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 transition-all duration-300 hover:bg-white/20 hover:scale-105 hover:shadow-2xl group"
-            >
-              {/* Image Container */}
-              <div className="relative overflow-hidden h-72">
-                <img 
-                  src={member.image} 
-                  alt={member.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                
-                {/* Overlay with Bio */}
-                <div className={`
-                  absolute inset-0 bg-gradient-to-t from-[#0A3B2E] via-[#0A3B2E]/95 to-transparent
-                  transition-opacity duration-300
-                  ${hoveredMember === member.id ? 'opacity-100' : 'opacity-0'}
-                  flex items-end p-6
-                `}>
-                  <p className="text-white text-sm leading-relaxed">
-                    {member.bio}
-                  </p>
-                </div>
-
-                {/* Social Links Overlay */}
-                <div className={`
-                  absolute top-4 right-4 flex flex-col gap-2
-                  transition-all duration-300
-                  ${hoveredMember === member.id ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'}
-                `}>
-                  <a 
-                    href={member.linkedin}
-                    className="bg-white/90 hover:bg-white p-2 rounded-full transition-colors shadow-lg"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    <Linkedin className="w-4 h-4 text-[#009B4C]" />
-                  </a>
-                  <a 
-                    href={member.twitter}
-                    className="bg-white/90 hover:bg-white p-2 rounded-full transition-colors shadow-lg"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    <Twitter className="w-4 h-4 text-[#009B4C]" />
-                  </a>
-                  <a 
-                    href={`mailto:${member.email}`}
-                    className="bg-white/90 hover:bg-white p-2 rounded-full transition-colors shadow-lg"
-                  >
-                    <Mail className="w-4 h-4 text-[#009B4C]" />
-                  </a>
-                </div>
-              </div>
-
-              {/* Info Section */}
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-bold text-white mb-1">
-                  {member.name}
-                </h3>
-                <p className="text-white/80 text-sm font-medium">
-                  {member.role}
-                </p>
-              </div>
+        <section className="w-full max-w-5xl mx-auto py-8 lg:py-16 text-white">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+        {teamMembers.map((member) => (
+          <div
+            key={member.id}
+            className="group bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 flex flex-col items-center text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-white/20"
+          >
+            {/* Initials Circle */}
+            <div className="w-24 h-24 flex items-center justify-center rounded-full bg-white/30 backdrop-blur-sm shadow-inner group-hover:rotate-3 transition-all">
+              <span className="text-2xl font-bold text-[#fff]">
+                {getInitials(member.name)}
+              </span>
             </div>
-          ))}
-        </div>
+
+            {/* Info */}
+            <h3 className="mt-5 text-lg font-bold text-white">
+              {member.name}
+            </h3>
+            <p className="text-white/70 text-sm">{member.role}</p>
+          </div>
+        ))}
+      </div>
+    </section>
         {/* Join Team CTA */}
         <div className="mt-16 text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 max-w-3xl mx-auto">
@@ -159,5 +116,4 @@ const MeetTheTeam = () => {
   );
 };
 
-// Demo wrapper
-export default  MeetTheTeam;
+export default MeetTheTeam;
