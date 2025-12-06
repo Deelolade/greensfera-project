@@ -146,7 +146,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8 text-center">
           <p className="text-white/70 text-sm">
-            &copy; {new Date().getFullYear()} GreenSfera. All rights reserved. Founded by Ezugorie Obele.
+            &copy; {new Date().getFullYear()} GreenSfera. All rights reserved. Develop by <a href="https://www.tinzwave.com" className='hover:underline'>Tinzwave technologies</a>.
           </p>
         </div>
       </div>
