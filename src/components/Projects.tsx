@@ -56,9 +56,9 @@ export default function ProjectSection() {
           {projects.map((project, idx) => {
             return (
               <div key={idx} className='overflow-hidden '>
-                <div className='overflow-hidden rounded-2xl shadow-lg'>
+                {/* <div className='overflow-hidden rounded-2xl shadow-lg'>
                   <img src={project.image} alt="" className='max-w-[620px] h-[384px] w-full rounded-2xl object-cover transition-transform duration-700 ease-in-out hover:scale-105' />
-                </div>
+                </div> */}
                 <div className="mt-6 ">
                   <p className=' text-[#009B4C] font-semibold '>{project.title}</p>
                   <h2 className='text-2xl font-semibold md:text-4xl my-2 font-heading'>{project.description}</h2>
