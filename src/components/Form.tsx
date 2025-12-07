@@ -180,8 +180,8 @@ const Form = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-[#0A3B2E] mb-1">Email</div>
-                    <a href="mailto:info@greensfera.org" className="text-gray-600 hover:text-[#009B4C] transition-colors">
-                      info@greensfera.org
+                    <a href="mailto:info@greensfera.com" className="text-gray-600 hover:text-[#009B4C] transition-colors">
+                      info@greensfera.com
                     </a>
                   </div>
                 </div>

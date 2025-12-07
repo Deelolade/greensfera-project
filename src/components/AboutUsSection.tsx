@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Sparkles, Zap, Users, Globe2, ArrowRight, PlayCircle } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const AboutUsSection = () => {
+  const navigate = useNavigate()
   const [scrollY, setScrollY] = useState(0);
   const [activeQuote, setActiveQuote] = useState(0);
 
@@ -17,24 +19,6 @@ const AboutUsSection = () => {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
-
-  const impactStories = [
-    {
-      number: "73%",
-      label: "reduction in carbon footprint",
-      detail: "achieved by our community members in 2024"
-    },
-    {
-      number: "10K+",
-      label: "changemakers worldwide",
-      detail: "creating ripples of positive impact"
-    },
-    {
-      number: "156",
-      label: "countries represented",
-      detail: "in our growing global network"
-    }
-  ];
 
   const quotes = [
     {
@@ -93,7 +77,10 @@ const AboutUsSection = () => {
               <p className="text-lg lg:text-xl text-white font-medium"> Today, GreenSfera is helping communities adopt smarter, cleaner habits and we’re just getting started. </p> </div>
 
               <div className="flex flex-wrap  gap-2 lg:gap-4 pt-4">
-                <button className="bg-white text-[#009B4C] px-4 lg:px-8 py-3 lg:py-4 rounded-full font-semibold hover:bg-white/90 transition-all shadow-xl hover:shadow-2xl hover:scale-105 inline-flex items-center gap-2">
+                <button onClick={()=>{
+                    navigate('/contact-us')
+                    window.scrollTo({top: 0, behavior: 'smooth'})
+                }} className="bg-white text-[#009B4C] px-4 lg:px-8 py-3 lg:py-4 rounded-full font-semibold hover:bg-white/90 transition-all shadow-xl hover:shadow-2xl hover:scale-105 inline-flex items-center gap-2">
                   <span>Join the Movement</span>
                   <ArrowRight className="w-5 h-5" />
                 </button>

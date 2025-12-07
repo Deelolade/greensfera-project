@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import image from '../public/images/project-image-one.jpg'
+import image from '../public/images/plant-in-earth.jpg'
 const LearnMore = () => {
   const navigate = useNavigate()
   return (

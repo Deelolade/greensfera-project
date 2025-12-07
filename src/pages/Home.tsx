@@ -5,6 +5,7 @@ import GetInvolved from "../components/GetInvolved"
 import Header from "../components/Header"
 import Hero from "../components/Hero"
 import Impact from "../components/Impact"
+import JoinUs from "../components/JoinUs"
 import Projects from "../components/Projects"
 import TestimonialsSection from "../components/Testimonials"
 
@@ -19,6 +20,7 @@ const Home = () => {
       <Gallery/>
       <TestimonialsSection/>
       <GetInvolved/>
+        <JoinUs/>
       <Footer/>
     </>
   )

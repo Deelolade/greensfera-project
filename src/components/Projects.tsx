@@ -43,7 +43,7 @@ const projects = [
 
 export default function ProjectSection() {
   return (
-    <section className={`py-20 bg-gradient-to-br from-[#F2F0EA] via-white to-[#C2F0D5]/20`}>
+    <section className={`py-24 bg-gradient-to-br from-[#F2F0EA] via-white to-[#C2F0D5]/20`}>
       <div className="max-w-max mx-auto px-4 sm:px-6 lg:px-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#0A3B2E] mb-4">Our Projects</h2>
@@ -52,7 +52,7 @@ export default function ProjectSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:mb-20">
           {projects.map((project, idx) => {
             return (
               <div key={idx} className='overflow-hidden '>

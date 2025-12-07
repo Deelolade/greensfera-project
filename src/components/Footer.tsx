@@ -137,8 +137,8 @@ export default function Footer() {
               </a>
             </div>
             <p className="text-white/70 text-sm">
-              <a href="mailto:info@greensfera.org" className="hover:text-white transition-colors">
-                info@greensfera.org
+              <a href="mailto:info@greensfera.com" className="hover:text-white transition-colors">
+                info@greensfera.com
               </a>
             </p>
           </div>
