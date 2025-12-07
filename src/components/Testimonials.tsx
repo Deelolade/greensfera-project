@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Star, Quote, ChevronLeft, ChevronRight, } from 'lucide-react';
+import imageOne from '../public/images/male-testimonials.webp'
+import imageTwo from '../public/images/female-testimonials.webp'
+import imageThree from '../public/images/male-testimonials-two.webp'
+
 
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -8,21 +12,21 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Sarah Johnson",
+      name: "Chinedu Okafor",
       role: "Environmental Activist",
-      location: "San Francisco, CA",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+       location: "Enugu, Nigeria",
+      image: imageOne,
       rating: 5,
       text: "Joining this community has been life-changing. I've connected with amazing people who share my passion for creating positive change. The support and resources available have empowered me to make a real difference in my local community.",
-      impact: "Planted 5,000+ trees",
+       impact: "Led a cleanup that collected 10,000+ plastic bottles",
       video: false
     },
     {
       id: 2,
-      name: "Michael Chen",
+      name: "Temitope Adesina",
       role: "Youth Coordinator",
       location: "Singapore",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      image: imageTwo,
       rating: 5,
       text: "The training programs and mentorship I received here transformed my approach to youth engagement. Now I'm leading initiatives that impact hundreds of young people every month. This platform gave me the tools and confidence to scale my impact.",
       impact: "Mentored 200+ youth",
@@ -30,48 +34,48 @@ const TestimonialsSection = () => {
     },
     {
       id: 3,
-      name: "Aisha Patel",
+      name: "Hassan Abdullahi",
       role: "Community Organizer",
-      location: "Mumbai, India",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
+      location: "Kano, Nigeria",
+      image: imageThree,
       rating: 5,
       text: "What stands out most is the genuine care and support from everyone involved. This isn't just another organization—it's a family united by purpose. The impact we're creating together is beyond what I could have imagined achieving alone.",
       impact: "Organized 50+ events",
       video: false
     },
-    {
-      id: 4,
-      name: "David Martinez",
-      role: "Social Entrepreneur",
-      location: "Barcelona, Spain",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-      rating: 5,
-      text: "The network and partnerships I've built through this platform have been invaluable. I've launched three successful social enterprises with support from this community. The collaborative spirit here is unmatched.",
-      impact: "3 social enterprises launched",
-      video: false
-    },
-    {
-      id: 5,
-      name: "Emma Thompson",
-      role: "Sustainability Consultant",
-      location: "London, UK",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
-      rating: 5,
-      text: "As a professional in the sustainability sector, I've worked with many organizations. This one stands out for its authenticity and measurable impact. The transparency in operations and the dedication to real change is refreshing and inspiring.",
-      impact: "Advised 30+ companies",
-      video: true
-    },
-    {
-      id: 6,
-      name: "James Wilson",
-      role: "Volunteer Coordinator",
-      location: "Toronto, Canada",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
-      rating: 5,
-      text: "I started as a volunteer and now I coordinate programs that engage thousands. The growth opportunities and leadership development here are exceptional. They truly invest in their people and empower us to lead.",
-      impact: "Coordinated 1000+ volunteers",
-      video: false
-    }
+    // {
+    //   id: 4,
+    //   name: "David Martinez",
+    //   role: "Social Entrepreneur",
+    //   location: "Barcelona, Spain",
+    //   image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+    //   rating: 5,
+    //   text: "The network and partnerships I've built through this platform have been invaluable. I've launched three successful social enterprises with support from this community. The collaborative spirit here is unmatched.",
+    //   impact: "3 social enterprises launched",
+    //   video: false
+    // },
+    // {
+    //   id: 5,
+    //   name: "Emma Thompson",
+    //   role: "Sustainability Consultant",
+    //   location: "London, UK",
+    //   image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
+    //   rating: 5,
+    //   text: "As a professional in the sustainability sector, I've worked with many organizations. This one stands out for its authenticity and measurable impact. The transparency in operations and the dedication to real change is refreshing and inspiring.",
+    //   impact: "Advised 30+ companies",
+    //   video: true
+    // },
+    // {
+    //   id: 6,
+    //   name: "James Wilson",
+    //   role: "Volunteer Coordinator",
+    //   location: "Toronto, Canada",
+    //   image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+    //   rating: 5,
+    //   text: "I started as a volunteer and now I coordinate programs that engage thousands. The growth opportunities and leadership development here are exceptional. They truly invest in their people and empower us to lead.",
+    //   impact: "Coordinated 1000+ volunteers",
+    //   video: false
+    // }
   ];
 
   useEffect(() => {
@@ -146,7 +150,7 @@ const TestimonialsSection = () => {
                     <img 
                       src={currentTestimonial.image} 
                       alt={currentTestimonial.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                     />
                   </div>
                 </div>
@@ -227,7 +231,7 @@ const TestimonialsSection = () => {
                 <img 
                   src={testimonial.image} 
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-[#009B4C]/20"
+                  className="w-12 h-12 rounded-full object-center object-cover border-2 border-[#009B4C]/20"
                 />
                 <div>
                   <h4 className="font-bold text-white">{testimonial.name}</h4>
